@@ -1,9 +1,21 @@
 import React from "react";
+import Col from "react-bootstrap/cjs/Col";
+import Row from "react-bootstrap/cjs/Row";
 
 const Footer = () => {
     return (
         <>
-            <p>Footer</p>
+            <div style={{ width: "100%", backgroundColor: "#343A40", color: "white", padding: "10px" }}>
+                <Row>
+                    <Col xs={10} md={10} >
+                        <h5>GITAM TnP</h5>
+                    </Col>
+                    <Col>
+                        Powered by Saketh G
+                    </Col>
+
+                </Row>
+            </div>
         </>
     )
 }

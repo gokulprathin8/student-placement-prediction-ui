@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "react-bootstrap/cjs/Navbar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <>
+        <div>
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
                     <img
@@ -15,11 +16,16 @@ const Header = () => {
                     />{' '}
                     GITAM TnP Portal
                 </Navbar.Brand>
+                <Navbar.Collapse className="justify-content-end">
+                <Navbar.Text>
+                <a href="#login"><Link to="/login">Login</Link></a>
+                </Navbar.Text>
+            </Navbar.Collapse>
                 <div>
-
+                    
                 </div>
             </Navbar>
-        </>
+        </div>
     )
 }
 

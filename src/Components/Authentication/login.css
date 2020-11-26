@@ -1,0 +1,8 @@
+
+.Login-component {
+    background-image: url("../../Assets/images/loginBg.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
