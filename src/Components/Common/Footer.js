@@ -11,7 +11,7 @@ const Footer = () => {
                         <h5>GITAM TnP</h5>
                     </Col>
                     <Col>
-                        Powered by Saketh G
+                        Powered by TEAM D-05
                     </Col>
 
                 </Row>

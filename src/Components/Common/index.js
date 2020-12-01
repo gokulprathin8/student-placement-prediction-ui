@@ -3,12 +3,12 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Container from "react-bootstrap/cjs/Container";
 
-const HeaderFooter = ({children}) => {
+const HeaderFooter = ({children}, props) => {
     return (
         <>
             <Container >
                 <Header/>
-                {children}
+                {children }
                 <Footer/>
             </Container>
         </>

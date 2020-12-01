@@ -9763,6 +9763,11 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-web-tabs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-web-tabs/-/react-web-tabs-1.0.1.tgz#86972a9ca4a1de0d6fca31bc725e30c8a59c8e22"
+  integrity sha512-Cg5B2515iLTvown5Tby+f69hT3+3HXetvsGr/Akou1ltREX57E3b3xra4lBjuUay42epMZ/2rfq/e+tTwOgBTQ==
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"

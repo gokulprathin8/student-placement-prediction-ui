@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 const { Card, Form, Button } = require("react-bootstrap")
 
 const Login = () => {
     return (
         <>
+
 
 <div style={{ textAlign:"left", paddingLeft: "35%", paddingRight: "35%", paddingTop: "15%" }}>
 <Form>
@@ -17,8 +20,9 @@ const Login = () => {
   </Form.Group>
   <Form.Group controlId="formBasicCheckbox">
   </Form.Group>
-  <Button variant="primary" type="submit" style={{ marginLeft: "150px" }}>
-    Submit
+  <Button variant="outline-dark" style={{ marginLeft: "110px", color: "black" }}> <Link to="/">Home</Link> </Button>
+  <Button variant="success" type="submit" style={{ marginLeft: "20px", backgroundColor: "white", borderColor: "black" }}>
+    <Link to="/home">Submit</Link> 
   </Button>
 </Form>
 

@@ -72,9 +72,6 @@ const Body = () => {
                 </Col>
             </Row>
             </div>
-
-            
-
             <div style={{ padding: "20px" }}></div>
 
         </HeaderFooter>
