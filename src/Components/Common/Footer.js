@@ -7,7 +7,7 @@ const Footer = () => {
         <>
             <div style={{ width: "100%", backgroundColor: "#343A40", color: "white", padding: "10px" }}>
                 <Row>
-                    <Col xs={10} md={10} >
+                    <Col xs={9} md={9} >
                         <h5>GITAM TnP</h5>
                     </Col>
                     <Col>

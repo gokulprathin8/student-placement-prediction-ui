@@ -15,14 +15,14 @@ const CommonLayout = () => {
     return (
         <HeaderFooter isLoggedin="true">
           <Jumbotron>
-  <h1>Welcome to Student Placement</h1>
-  <p>
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
-  </p>
+            <div style={{ textAlign: "center" }}>
+            <h1>Welcome to TnP Portal </h1>
+            <p>
+              Gain expertise, compare, compete and propell your skills with us.
+            </p>
+            </div>
 </Jumbotron>
-          <div style={{ padding: "20px" }}></div>
-<div style={{ padding: "20px" }}></div>
+          <div style={{  }}></div>
         <Tabs defaultTab="vertical-tab-one" vertical>
         <TabList>
           <Tab tabFor="vertical-tab-one">Home</Tab>
