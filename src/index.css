@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text-xx {
+  font-family: 'Montserrat';
+  font-size: 60px;
+  font-weight: 800;
+  font-style: italic;
+  padding: 5px 10px;
+  margin: 0;
+}

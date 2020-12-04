@@ -10,18 +10,22 @@ import CurrentScores from "../Main/CurrentScores";
 import HeaderFooter from ".";
 import { Button, Jumbotron } from "react-bootstrap";
 import Predict from "../Main/Predict";
+import CustomCalender from "./CustomCalender";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const CommonLayout = () => {
     return (
         <HeaderFooter isLoggedin="true">
           <Jumbotron>
             <div style={{ textAlign: "center" }}>
-            <h1>Welcome to TnP Portal </h1>
+            <Zoom triggerOnce><h1>Welcome to TnP Portal </h1></Zoom>
+            <Fade triggerOnce>
             <p>
               Gain expertise, compare, compete and propell your skills with us.
             </p>
+            </Fade>
             </div>
-</Jumbotron>
+        </Jumbotron>
           <div style={{  }}></div>
         <Tabs defaultTab="vertical-tab-one" vertical>
         <TabList>
@@ -55,6 +59,11 @@ const CommonLayout = () => {
           <Predict/>
         </TabPanel>
       </Tabs>
+
+      <div style={{ padding: "20px" }}> </div>
+
+      <CustomCalender />
+
         </HeaderFooter>
     )
 }

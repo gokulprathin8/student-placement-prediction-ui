@@ -1,6 +1,7 @@
 import { Button, Table } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Fade } from "react-awesome-reveal";
 
 const Notifications = () => {
     return (

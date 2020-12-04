@@ -6,7 +6,9 @@ const Header = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark">
+            <Link to="/">
                 <Navbar.Brand href="#home">
+                
                     <img
                         alt=""
                         src="https://upload.wikimedia.org/wikipedia/en/0/02/Pics_gitam_tee.jpg"
@@ -14,8 +16,11 @@ const Header = () => {
                         height="30"
                         className="d-inline-block align-top"
                     />{' '}
+                    
                     GITAM TnP Portal
+                    
                 </Navbar.Brand>
+                </Link> 
                 <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
                 <a href="#login"><Link to="/login">Login</Link></a>

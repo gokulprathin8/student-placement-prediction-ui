@@ -1,7 +1,6 @@
 import React from "react";
 import moment from "moment";
 import Calendar from "react-full-event-calendar";
-import HeaderFooter from "./index";
 
 const events = [
     {
@@ -23,7 +22,9 @@ const events = [
 
 
 const CustomCalender = () => {
+    return (
         <Calendar events={events} />
+    );
 }
 
 export default CustomCalender;
