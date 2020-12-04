@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 
 const Jobs = () => {
     return (
@@ -13,6 +13,7 @@ const Jobs = () => {
       <th>BondNumberYr</th>
       <th>Role</th>
       <th>Job description</th>
+      <th>Click to Apply for Job</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,7 @@ const Jobs = () => {
       <td>2</td>
       <td>manager</td>
       <td>To manage clients</td>
+      <td><Button type="button" class="btn btn-primary">Apply for Job</Button></td>
     </tr>
     <tr>
       <td>2</td>
@@ -33,6 +35,7 @@ const Jobs = () => {
       <td>3</td>
       <td>associate developer</td>
       <td>coding</td>
+      <td><Button type="button" class="btn btn-primary">Apply for Job</Button></td>
     </tr>
     <tr>
     <td>2</td>
@@ -42,9 +45,11 @@ const Jobs = () => {
       <td>0</td>
       <td>sde-1</td>
       <td>coding and problem solving</td>
+      <td><Button type="button" class="btn btn-primary">Apply for Job</Button></td>
     </tr>
   </tbody>
 </Table>
+
 
         </>
     )

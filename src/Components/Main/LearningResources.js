@@ -1,11 +1,34 @@
+import { Button, Card, Col, Row } from "react-bootstrap";
+
 const LearningResources = () => {
     return (
         <>
-        <p>Material Name 1</p>
-        <a class="bootstrap-link">https://www.google.co.in</a>
-        <div style={{ padding: "15px" }}></div>
-        <p>Material Name 2</p>
-        <a class="bootstrap-link">https://www.google.co.in</a>
+<Row>
+<div style={{ padding: "20px" }}></div>
+<Card style={{ width: '18rem' }}>
+<Card.Body>
+    <Card.Title>Dbms material</Card.Title>
+    <Card.Text>
+      Dbms learning resources 
+    </Card.Text>
+    <Button href="https://www.javatpoint.com/dbms-tutorial">Dbms Material</Button>
+  </Card.Body>
+</Card>
+<div style={{ padding: "20px" }}></div>
+<Card style={{ width: '18rem' }}>
+<Card.Body>
+    <Card.Title>C Programming material</Card.Title>
+    <Card.Text>
+    C Programming learning resources 
+    </Card.Text>
+    <Button href="https://www.programiz.com/c-programming">C Programming Material</Button>
+  </Card.Body>
+</Card>
+
+</Row> 
+
+
+
         </>
     )
 }

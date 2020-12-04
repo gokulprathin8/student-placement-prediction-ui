@@ -18,10 +18,7 @@ const CurrentScores = () => {
     <Col sm={9}>
       <Tab.Content>
         <Tab.Pane eventKey="first">
-          <Sonnet />
-        </Tab.Pane>
-        <Tab.Pane eventKey="second">
-          <Sonnet />
+         
         </Tab.Pane>
       </Tab.Content>
     </Col>

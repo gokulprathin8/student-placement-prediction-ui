@@ -9,6 +9,7 @@ import Faculty from "../Main/Faculty";
 import CurrentScores from "../Main/CurrentScores";
 import HeaderFooter from ".";
 import { Button, Jumbotron } from "react-bootstrap";
+import Predict from "../Main/Predict";
 
 const CommonLayout = () => {
     return (
@@ -30,6 +31,7 @@ const CommonLayout = () => {
           <Tab tabFor="vertical-tab-four">Learning Resources</Tab>
           <Tab tabFor="vertical-tab-five">Faculty</Tab>
           <Tab tabFor="vertical-tab-six">Current Scores</Tab>
+          <Tab tabFor="vertical-tab-seven">Predict</Tab>
         </TabList>
         <TabPanel tabId="vertical-tab-one">
           <Homepage/>
@@ -48,6 +50,9 @@ const CommonLayout = () => {
         </TabPanel>
         <TabPanel tabId="vertical-tab-six">
           <CurrentScores/>
+        </TabPanel>
+        <TabPanel tabId="vertical-tab-seven">
+          <Predict/>
         </TabPanel>
       </Tabs>
         </HeaderFooter>
