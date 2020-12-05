@@ -12,6 +12,7 @@ import { Button, Jumbotron } from "react-bootstrap";
 import Predict from "../Main/Predict";
 import CustomCalender from "./CustomCalender";
 import { Fade, Zoom } from "react-awesome-reveal";
+import Feedback from "../Main/Feedback";
 
 const CommonLayout = () => {
     return (
@@ -36,6 +37,7 @@ const CommonLayout = () => {
           <Tab tabFor="vertical-tab-five">Faculty</Tab>
           <Tab tabFor="vertical-tab-six">Current Scores</Tab>
           <Tab tabFor="vertical-tab-seven">Predict</Tab>
+          <Tab tabFor="vertical-tab-eight">Feedback</Tab>
         </TabList>
         <TabPanel tabId="vertical-tab-one">
           <Homepage/>
@@ -58,11 +60,19 @@ const CommonLayout = () => {
         <TabPanel tabId="vertical-tab-seven">
           <Predict/>
         </TabPanel>
+        <TabPanel tabId="vertical-tab-eight">
+          <Feedback/>
+        </TabPanel>
       </Tabs>
 
       <div style={{ padding: "20px" }}> </div>
 
+      <div style={{textAlign:"center"}}>
+
       <CustomCalender />
+      </div>
+      <div style={{ padding: "20px" }}> </div>
+      
 
         </HeaderFooter>
     )
