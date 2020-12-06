@@ -3,8 +3,15 @@ import Slider from "react-slick";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from "react-bootstrap/cjs/Row";
 import Col from "react-bootstrap/cjs/Col";
-import { Button, Card } from 'react-bootstrap';
-import { Fade, Zoom, Bounce, Rotate, Slide ,Roll  } from "react-awesome-reveal";
+import { Button, Card, Tabs, Tab } from 'react-bootstrap';
+import { Fade, Zoom, Bounce, Rotate, Slide, Roll } from "react-awesome-reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTrash, faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import Coreteam from "./Coreteam";
+import Facultycoordinator from "./Facultycoordinator";
+import Recruitmentprocess from "./Recruitmentprocess";
+import Infrastructure from "./Infrastructutre";
+
 
 
 
@@ -39,6 +46,7 @@ function Body() {
                     </div>
                 </Slider>
             </div>
+            <div style={{ padding: "20px" }}></div>
 
             <div style={{ padding: "20px" }}></div>
             <div style={{ paddingLeft: "50px" }}>
@@ -48,11 +56,12 @@ function Body() {
                     </Slide>
                     <div style={{ padding: "20px" }}></div>
                     <Fade top>
-                    <Card>
-                        <Card.Body>Training and Placement Cell (T&P) was established in 2010. It functions with the coordination of heads of the departments, faculty, and student representatives. GITAM has intelligent and highly motivated young students who aspire to have a rewarding career in leading firms, MNC’s and well established organizations. Training & Placement Cell thoroughly trains students right from the first year to deliver their best in the selection processes of reputed organizations.</Card.Body>
-                    </Card>
+                        <Card>
+                            <Card.Body>Training and Placement Cell (T&P) was established in 2010. It functions with the coordination of heads of the departments, faculty, and student representatives. GITAM has intelligent and highly motivated young students who aspire to have a rewarding career in leading firms, MNC’s and well established organizations. Training & Placement Cell thoroughly trains students right from the first year to deliver their best in the selection processes of reputed organizations.</Card.Body>
+                        </Card>
                     </Fade>
                 </div>
+                <div style={{ padding: "20px" }}></div>
                 <div style={{ padding: "20px" }}></div>
                 <div style={{ textAlign: "center" }}>
                     <Bounce left>
@@ -106,7 +115,7 @@ function Body() {
 
                 </Row>
 
-
+                <div style={{ padding: "20px" }}></div>
             </div>
             <div style={{ padding: "20px" }}></div>
             <div style={{ textAlign: "center" }}>
@@ -117,14 +126,14 @@ function Body() {
             <div style={{ padding: "20px" }}></div>
             <Row>
                 <Col>
-                
+
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/105411.jpg" />
                         <Card.Body>
                             <Card.Title style={{ textAlign: "center" }}>AMAZON CAMPUS DRIVE</Card.Title>
                         </Card.Body>
                     </Card>
-                    
+
                 </Col>
                 <Col>
                     <Card style={{ width: '18rem' }}>
@@ -171,6 +180,62 @@ function Body() {
                 </Col>
 
             </Row>
+            <div style={{ padding: "20px" }}></div>
+            <div>
+                <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                    <Tab eventKey="home" title="Core Team">
+                        <Coreteam/>
+
+                    </Tab>
+                    <Tab eventKey="faculty" title="Faculty Co-ordinators">
+                        <Facultycoordinator/>
+
+                    </Tab>
+                    <Tab eventKey="contact" title="Recruitment Process" >
+                        <Recruitmentprocess/>
+
+                    </Tab>
+                    <Tab eventKey="profile" title="Infrastructure" >
+                        <Infrastructure/>
+
+                    </Tab>
+                </Tabs>
+            </div>
+            <div style={{ padding: "20px" }}></div>
+            <div style={{ padding: "20px" }}></div>
+
+
+            <div style={{ textAlign: "center" }}>
+                <Bounce left>
+                    <h2>Contact Us</h2>
+                </Bounce>
+            </div>
+            <div style={{ textAlign: "center", paddingLeft: "37%" }}>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Body>
+                        <Card.Text>
+                            GITAM (Deemed to be University)
+                            Hyderabad
+                            Rudraram, Patancheru Mandal,
+                            Hyderabad, Telangana,
+                            Sangareddy Dist- 502329
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </div>
+            <div style={{ padding: "20px" }}></div>
+            <div style={{ textAlign: "center", paddingLeft: "37%" }}>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Body>
+                        <Card.Text>
+                            <FontAwesomeIcon icon={faUser} /> Dr. N. Venu Kumar Director CGC
+                        <FontAwesomeIcon icon={faEnvelope} /> directorcgc_hyd@gitam.edu
+                        <FontAwesomeIcon icon={faPhone} />08455-221312
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </div>
+
             <div style={{ padding: "20px" }}></div>
 
         </HeaderFooter>

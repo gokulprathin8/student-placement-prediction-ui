@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import './login.css';
 
 const { Card, Form, Button } = require("react-bootstrap")
 
 const Login = () => {
     return (
         <>
+
 
 
 <div style={{ textAlign:"left", paddingLeft: "35%", paddingRight: "35%", paddingTop: "15%" }}>
