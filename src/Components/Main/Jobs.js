@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Button, Table, Alert } from "react-bootstrap";
-import ToggleButton from 'react-bootstrap/ToggleButton'
 import { connect } from "react-redux";
 import { fetchJobs } from "../../redux/actions";
 

@@ -1,36 +1,41 @@
-import { Button, Card, Col, Row } from "react-bootstrap";
+import React, {useEffect} from "react";
+import {Button, Card, Col, Row} from "react-bootstrap";
+import {connect} from "react-redux";
+import {fetchLearningResources} from "../../redux/actions";
 
-const LearningResources = () => {
+const LearningResources = (props) => {
+    useEffect(() => {
+        props.fetchLearningResources();
+    }, []);
+
     return (
         <>
-<Row>
-<div style={{ padding: "20px" }}></div>
-<Card style={{ width: '18rem' }}>
-<Card.Body>
-    <Card.Title>Dbms material</Card.Title>
-    <Card.Text>
-      Dbms learning resources 
-    </Card.Text>
-    <Button href="https://www.javatpoint.com/dbms-tutorial">Dbms Material</Button>
-  </Card.Body>
-</Card>
-<div style={{ padding: "20px" }}></div>
-<Card style={{ width: '18rem' }}>
-<Card.Body>
-    <Card.Title>C Programming material</Card.Title>
-    <Card.Text>
-    C Programming learning resources 
-    </Card.Text>
-    <Button href="https://www.programiz.com/c-programming">C Programming Material</Button>
-  </Card.Body>
-</Card>
-
-</Row> 
-
-
-
+            <Row>
+                {props.learningResources.length > 0 ?
+                    props.learningResources.map((r) => {
+                        return (
+                            <div style={{ padding: "10px" }}>
+                                <Card style={{width: '18rem'}}>
+                                    <Card.Body>
+                                        <Card.Title>{r.subject} - Material</Card.Title>
+                                        <Card.Text>
+                                            {r.description}
+                                        </Card.Text>
+                                        <Button href={r.document}>{r.title}</Button>
+                                    </Card.Body>
+                                </Card>
+                                <div style={{padding: "20px"}}></div>
+                            </div>
+                        )
+                    })
+                    : null}
+            </Row>
         </>
     )
 }
 
-export default LearningResources;
+const mapStateToProps = (state) => {
+    return {learningResources: state.learningResources.learningList};
+}
+
+export default connect(mapStateToProps, {fetchLearningResources})(LearningResources);

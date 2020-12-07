@@ -1,68 +1,44 @@
-import { Button, Card, Row ,Col } from "react-bootstrap";
+import React, {useEffect} from "react";
+import {Button, Card, Row, Col} from "react-bootstrap";
+import {connect} from "react-redux";
+import {fetchFaculty} from "../../redux/actions";
 
-const Faculty = () => {
+const Faculty = (props) => {
+    useEffect(() => {
+        props.fetchFaculty();
+    }, [])
+
     return (
-        <>
-    
-<Row>
+        <div style={{ textAlign: "center" }}>
+            <Row>
+                {props.staff.length > 0 ? props.staff.map((f) => {
+                    return (
 
-<Col>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://staffphotos.gitam.edu/10388.jpg" />
-  <Card.Body>
-    <Card.Title>Rahul K</Card.Title>
-    <Card.Text>
-    Rahul has inspired many students fulfil their dreams
-    </Card.Text>
-    <Button href="rahulk@gmail.com">Contact Vishwas</Button>
-  </Card.Body>
-</Card>
-</Col>
+                    <Col>
+                        <Card style={{width: '18rem'}}>
+                            <Card.Img variant="top" src={f.photo}/>
+                            <Card.Body>
+                                <Card.Title>{f.name}</Card.Title>
+                                <hr/>
+                                <Card.Text>
+                                    <p>Subject: {f.subject}</p>
+                                   <p>Ph. No: {f.contact_phone_number}</p>
+                                    {f.department} <br/>
+                                </Card.Text>
+                                <Button href={f.contact_email_id}>Contact {f.name}</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    )
+                }) :null}
 
-<Col>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://staffphotos.gitam.edu/10202.jpg" />
-  <Card.Body>
-    <Card.Title>Vishwas M</Card.Title>
-    <Card.Text>
-      Vishwas has inspired many students fulfil their dreams
-    </Card.Text>
-    <Button href="rahulk@gmail.com">Contact Vishwas</Button>
-  </Card.Body>
-</Card>
-</Col>
 
-<Col>
-<div style={{ padding: "20px" }}></div>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://staffphotos.gitam.edu/1944.jpg" />
-  <Card.Body>
-    <Card.Title>Vishwas M</Card.Title>
-    <Card.Text>
-      Vishwas has inspired many students fulfil their dreams
-    </Card.Text>
-    <Button href="rahulk@gmail.com">Contact Vishwas</Button>
-  </Card.Body>
-</Card>
-</Col>
-
-<Col>
-<div style={{ padding: "20px" }}></div>
-<Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="https://staffphotos.gitam.edu/10391.jpg" />
-  <Card.Body>
-    <Card.Title>Vishwas M</Card.Title>
-    <Card.Text>
-      Vishwas has inspired many students fulfil their dreams
-    </Card.Text>
-    <Button href="rahulk@gmail.com">Contact Vishwas</Button>
-  </Card.Body>
-</Card>
-</Col>
-
-</Row>
-        </>
+            </Row>
+        </div>
     )
 }
+const mapStateToProps = (state) => {
+    return {staff: state.staff.facultyList};
+}
 
-export default Faculty;
+export default connect(mapStateToProps, {fetchFaculty})(Faculty);
