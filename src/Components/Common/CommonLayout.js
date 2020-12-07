@@ -17,6 +17,9 @@ import Feedback from "../Main/Feedback";
 const CommonLayout = () => {
     return (
         <HeaderFooter isLoggedin="true">
+
+
+
           <Jumbotron>
             <div style={{ textAlign: "center" }}>
             <Zoom triggerOnce><h1>Welcome to TnP Portal </h1></Zoom>
