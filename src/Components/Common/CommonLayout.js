@@ -13,6 +13,7 @@ import Predict from "../Main/Predict";
 import CustomCalender from "./CustomCalender";
 import { Fade, Zoom } from "react-awesome-reveal";
 import Feedback from "../Main/Feedback";
+import Assignment from "../Main/Assignment";
 
 const CommonLayout = () => {
     return (
@@ -41,6 +42,7 @@ const CommonLayout = () => {
           <Tab tabFor="vertical-tab-six">Current Scores</Tab>
           <Tab tabFor="vertical-tab-seven">Predict</Tab>
           <Tab tabFor="vertical-tab-eight">Feedback</Tab>
+          <Tab tabFor="vertical-tab-nine">Assignments</Tab>
         </TabList>
         <TabPanel tabId="vertical-tab-one">
           <Homepage/>
@@ -65,6 +67,9 @@ const CommonLayout = () => {
         </TabPanel>
         <TabPanel tabId="vertical-tab-eight">
           <Feedback/>
+        </TabPanel>
+        <TabPanel tabId="vertical-tab-nine">
+          <Assignment/>
         </TabPanel>
       </Tabs>
 

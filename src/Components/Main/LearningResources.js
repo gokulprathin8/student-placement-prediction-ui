@@ -14,7 +14,7 @@ const LearningResources = (props) => {
                 {props.learningResources.length > 0 ?
                     props.learningResources.map((r) => {
                         return (
-                            <div style={{ padding: "10px" }}>
+                            <div style={{ padding: "10px", textAlign:"center" }}>
                                 <Card style={{width: '18rem'}}>
                                     <Card.Body>
                                         <Card.Title>{r.subject} - Material</Card.Title>
