@@ -8,7 +8,7 @@ export default (
 ) => {
     switch (action.type) {
         case FETCH_JOBS:
-            return { ...state, jobsList: action.payload.data }
+            return { ...state, jobsList: action.payload }
         default:
             return state;
     }

@@ -4,7 +4,7 @@ import {
 } from "./types";
 
 export const fetchJobs = () => async (dispatch) => {
-    const response = await gitamx.get("/jobs/?format=json")
+    const response = await gitamx.get("/jobs/")
     dispatch({
         type: FETCH_JOBS,
         payload: response.data,

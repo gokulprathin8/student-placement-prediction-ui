@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: 'http://cbd699adedfd.ngrok.io/api',
+    baseURL: 'https://student-placement-prediction-1.herokuapp.com/api',
 })

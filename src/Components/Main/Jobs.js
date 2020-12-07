@@ -1,7 +1,27 @@
 import React, { useEffect } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, Table, Alert } from "react-bootstrap";
+import ToggleButton from 'react-bootstrap/ToggleButton'
 import { connect } from "react-redux";
 import { fetchJobs } from "../../redux/actions";
+
+const onJobApply = () => {
+  return (
+      <Alert variant="success">
+        <Alert.Heading>Hey, nice to see you</Alert.Heading>
+        <p>
+          Aww yeah, you successfully read this important alert message. This example
+          text is going to run a bit longer so that you can see how spacing within an
+          alert works with this kind of content.
+        </p>
+        <hr />
+        <p className="mb-0">
+          Whenever you need to, be sure to use margin utilities to keep things nice
+          and tidy.
+        </p>
+      </Alert>
+  )
+}
+
 
 const Jobs = (props) => {
   useEffect(() => {
@@ -11,8 +31,6 @@ const Jobs = (props) => {
 
   return (
     <>
-    {console.log(props.jobs)}
-      {props.jobs.length > 0 ? (props.jobs.map((job) => {
         <Table striped style={{ textAlign: "center" }}>
           <thead>
             <tr>
@@ -26,23 +44,26 @@ const Jobs = (props) => {
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          { props.jobs.length > 0 ? props.jobs.map((job) => {
+            return (
+            <tbody>
             <tr>
               <td>{job.id}</td>
               <td>{job.companyName}</td>
               <td>{job.package}</td>
-              <td>{job.hasBond}</td>
+              <td>{job.hasBond.toString()}</td>
               <td>{job.bondYears}</td>
               <td>{job.role}</td>
               <td>{job.jobDescription}</td>
-              <td><Button type="button" class="btn btn-primary">Apply</Button></td>
+              <td><Button   onChange={onJobApply} type="button" class="btn btn-primary">Apply</Button></td>
             </tr>
-          </tbody>
-        </Table>
-      }
-      )
+            </tbody>
+            )
+          }) : null  }
 
-      ) : null}
+        </Table>
+
+
     </>
   )
 }
