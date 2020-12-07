@@ -11,18 +11,7 @@ import Coreteam from "./Coreteam";
 import Facultycoordinator from "./Facultycoordinator";
 import Recruitmentprocess from "./Recruitmentprocess";
 import Infrastructure from "./Infrastructutre";
-
-
-
-
-
-
-// import { GradientText, Gradient } from 'react-gradient-text';
-// import Gradient from '../node_modules/gradient/index.js';
-// let rainbow = Gradient('#0071bc', '#662d91', '#e5005d', 10).toArray('rgbString');
-
-
-
+import Maps from "./Maps";
 
 function Body() {
     var settings = {
@@ -203,15 +192,20 @@ function Body() {
             </div>
             <div style={{ padding: "20px" }}></div>
             <div style={{ padding: "20px" }}></div>
-
-
-            <div style={{ textAlign: "center" }}>
+            <div style={{ padding: "40px" }}>
+                
+                <Row>
+                    <Col xs={7} lg={7}>
+                        <Maps/>
+                    </Col>
+                    <Col>
+                    <div style={{ textAlign: "center" }}>
                 <Bounce left>
                     <h2>Contact Us</h2>
                 </Bounce>
             </div>
-            <div style={{ textAlign: "center", paddingLeft: "37%" }}>
-                <Card style={{ width: '18rem' }}>
+            <div style={{ textAlign: "center", paddingRight: "37%" }}>
+                <Card style={{ width: '25rem' }}>
                     <Card.Body>
                         <Card.Text>
                             GITAM (Deemed to be University)
@@ -224,8 +218,8 @@ function Body() {
                 </Card>
             </div>
             <div style={{ padding: "20px" }}></div>
-            <div style={{ textAlign: "center", paddingLeft: "37%" }}>
-                <Card style={{ width: '18rem' }}>
+            <div style={{ textAlign: "center", paddingRight: "37%" }}>
+                <Card style={{ width: '25rem' }}>
                     <Card.Body>
                         <Card.Text>
                             <FontAwesomeIcon icon={faUser} /> Dr. N. Venu Kumar Director CGC
@@ -235,6 +229,12 @@ function Body() {
                     </Card.Body>
                 </Card>
             </div>
+                    </Col>
+                </Row>
+            </div>
+
+
+            
 
             <div style={{ padding: "20px" }}></div>
 
