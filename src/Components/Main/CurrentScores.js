@@ -1,32 +1,36 @@
+import React, {useEffect} from "react";
 import { Button, Col, Form, Nav, Row, Tab } from "react-bootstrap";
+import { connect } from "react-redux";
+import {currentScores} from "../../redux/actions";
 
-const CurrentScores = () => {
+const CurrentScores = (props) => {
+    useEffect(() => {
+        props.currentScores();
+    }, [])
+
+
     return (
         <>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-  <Row>
-    <Col sm={3}>
-      <Nav variant="pills" className="flex-column">
-        <Nav.Item>
-          <Nav.Link eventKey="first">Tab 1</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="second">Tab 2</Nav.Link>
-        </Nav.Item>
-      </Nav>
-    </Col>
-    <Col sm={9}>
-      <Tab.Content>
-        <Tab.Pane eventKey="first">
-         
-        </Tab.Pane>
-      </Tab.Content>
-    </Col>
-  </Row>
-</Tab.Container>
+            {props.currentScores.length > 0 ? props.currentScores.map((s) => {
+                return(
+                <Row>
+                    <Col>
+                        wrfj
+                        <b>Tenth: {s.id}</b>
+                    </Col>
+                </Row>
+
+
+                )
+            }) : null}
+
 
         </>
     )
 }
 
-export default CurrentScores;
+const mapStateToProps = (state) => {
+    return { currentScores: state.scores.currentScoresList }
+}
+
+export default connect(mapStateToProps, {currentScores})(CurrentScores);

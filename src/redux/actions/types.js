@@ -9,3 +9,10 @@ export const FETCH_LEARNING_RESOURCES = "FETCH_LEARNING_RESOURCES";
 
 /* Feedback */
 export const POST_FEEDBACK = "POST_FEEDBACK";
+
+/* Notifications */
+export const FETCH_NOTIFICATION = "FETCH_NOTIFICATION";
+
+
+/* Current Scores */
+export const CURRENT_SCORES = "CURRENT_SCORES";
