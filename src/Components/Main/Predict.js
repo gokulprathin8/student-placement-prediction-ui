@@ -1,5 +1,6 @@
 import { Form, Button, Row, Col } from "react-bootstrap";
 
+
 const Predict = () => {
     return (
         <>
@@ -78,6 +79,8 @@ const Predict = () => {
         </div>
         
     </Form>
+
+    
     </>
     )
 }
