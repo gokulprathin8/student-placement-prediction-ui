@@ -18,19 +18,18 @@ import Assignment from "../Main/Assignment";
 const CommonLayout = () => {
     return (
         <HeaderFooter isLoggedin="true">
-
-
-
-          <Jumbotron >
+          
             <div style={{ textAlign: "center" }}>
-            <Zoom triggerOnce><h1>Welcome to TnP Portal </h1></Zoom>
+            <Jumbotron>
+            <Zoom triggerOnce><h1>Welcome to TnP Student Portal </h1></Zoom>
             <Fade triggerOnce>
             <p>
               Gain expertise, compare, compete and propell your skills with us.
             </p>
             </Fade>
+            </Jumbotron>
             </div>
-        </Jumbotron>
+        
           <div style={{  }}></div>
         <Tabs defaultTab="vertical-tab-one" vertical>
         <TabList>
