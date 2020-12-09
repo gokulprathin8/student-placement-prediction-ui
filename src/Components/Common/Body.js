@@ -204,6 +204,7 @@ function Body() {
                     <h2>Contact Us</h2>
                 </Bounce>
             </div>
+            <div style={{ padding: "20px" }}></div>
             <div style={{ textAlign: "center", paddingRight: "37%" }}>
                 <Card style={{ width: '25rem' }}>
                     <Card.Body>
@@ -222,9 +223,9 @@ function Body() {
                 <Card style={{ width: '25rem' }}>
                     <Card.Body>
                         <Card.Text>
-                            <FontAwesomeIcon icon={faUser} /> Dr. N. Venu Kumar Director CGC
-                        <FontAwesomeIcon icon={faEnvelope} /> directorcgc_hyd@gitam.edu
-                        <FontAwesomeIcon icon={faPhone} />08455-221312
+                            <FontAwesomeIcon icon={faUser} /> &nbsp;Dr. N. Venu Kumar Director <br/>
+                        <FontAwesomeIcon icon={faEnvelope} />&nbsp; directorcgc_hyd@gitam.edu<br/>
+                        <FontAwesomeIcon icon={faPhone} />&nbsp;08455-221312
                         </Card.Text>
                     </Card.Body>
                 </Card>

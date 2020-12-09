@@ -27,7 +27,7 @@ const Login = (props) => {
   }
 
   return (
-    <>
+    <div class=".Login-component">
       <div style={{ textAlign: "left", paddingLeft: "35%", paddingRight: "35%", paddingTop: "15%" }}>
         <Form onSubmit={onFormSubmit}>
           <Form.Group>
@@ -42,8 +42,7 @@ const Login = (props) => {
           </Button>
         </Form>
       </div>
-
-    </>
+    </div>
   )
 }
 

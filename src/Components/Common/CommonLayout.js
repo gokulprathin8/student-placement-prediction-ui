@@ -21,7 +21,7 @@ const CommonLayout = () => {
 
 
 
-          <Jumbotron>
+          <Jumbotron >
             <div style={{ textAlign: "center" }}>
             <Zoom triggerOnce><h1>Welcome to TnP Portal </h1></Zoom>
             <Fade triggerOnce>

@@ -10,8 +10,8 @@ const Infrastructure = () => {
                         <Card.Img variant="top" src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/249a141e2386141c3693c6ad862517ee.jpg" />
                         <Card.Body>
                             <Card.Text>
-                                Auditorium of 2500 capacity for Pre-Placement talk by the recruiters
-                                Computer labs with 1200 nodes for online exam
+                                Auditorium of 2500 capacity for Pre-Placement talk by the recruiters<br/>
+                                Computer labs with 1200 nodes for online exam<br/>
                                 Group discussion and Interview Rooms
             </Card.Text>
                         </Card.Body>

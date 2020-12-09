@@ -14,9 +14,9 @@ const Coreteam = () =>
                         <Card.Img variant="top" src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/02a3fd4b7369484d2478756ceb8312c1.jpg" />
                         <Card.Body>
                         <Card.Text>
-                            <FontAwesomeIcon icon={faUser} /> Dr. N. Venu Kumar Director CGC
-                        <FontAwesomeIcon icon={faEnvelope} /> directorcgc_hyd@gitam.edu
-                        <FontAwesomeIcon icon={faPhone} />08455-221312
+                            <FontAwesomeIcon icon={faUser} /> &nbsp; Dr. N. Venu Kumar <br/>
+                        <FontAwesomeIcon icon={faEnvelope} /> &nbsp;directorcgc_hyd@gitam.edu<br/>
+                        <FontAwesomeIcon icon={faPhone} />&nbsp;08455-221312
                         </Card.Text>
                     </Card.Body>
                     </Card>
@@ -29,9 +29,9 @@ const Coreteam = () =>
                         <Card.Img variant="top" src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/75963440100a70e7822e6c8171bd647c.jpg" />
                         <Card.Body>
                         <Card.Text>
-                            <FontAwesomeIcon icon={faUser} /> Mr. M. Manigandan
-                        <FontAwesomeIcon icon={faEnvelope} /> tnp.tpo@gitam.edu
-                        <FontAwesomeIcon icon={faPhone} />09000203862
+                            <FontAwesomeIcon icon={faUser} />&nbsp; Mr. M. Manigandan<br/>
+                        <FontAwesomeIcon icon={faEnvelope} />&nbsp; tnp.tpo@gitam.edu<br/>
+                        <FontAwesomeIcon icon={faPhone} />&nbsp;09000203862
                         </Card.Text>
                     </Card.Body>
                     </Card>
@@ -44,9 +44,9 @@ const Coreteam = () =>
                         <Card.Img variant="top" src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/aa64e89c27b8b0d97ca6f7619e4cb7d1.jpg" />
                         <Card.Body>
                         <Card.Text>
-                            <FontAwesomeIcon icon={faUser} /> Mr. T. Lokesh
-                        <FontAwesomeIcon icon={faEnvelope} /> tnp.po@gitam.edu
-                        <FontAwesomeIcon icon={faPhone} />09603472479
+                            <FontAwesomeIcon icon={faUser} />&nbsp; Mr. T. Lokesh<br/>
+                        <FontAwesomeIcon icon={faEnvelope} />&nbsp; tnp.po@gitam.edu<br/>
+                        <FontAwesomeIcon icon={faPhone} />&nbsp;09603472479
                         </Card.Text>
                     </Card.Body>
                     </Card>

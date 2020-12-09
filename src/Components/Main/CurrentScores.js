@@ -14,11 +14,11 @@ const CurrentScores = (props) => {
     return (
         <>
         <div>
-            <h2>
+            <h2 style={{textAlign:"center"}}>
                 Viewing Scores
             </h2>
         </div>
-        
+        <div style={{padding: "20px"}}></div>
         {props.scores.length > 0 ? props.scores.map((d) => {
             return (
 
@@ -92,8 +92,14 @@ const CurrentScores = (props) => {
             </Form.Group>
             </Col>
         </Row>
-        
-        
+        <div style={{padding: "20px"}}></div>
+        <div>
+            <h2 style={{textAlign:"center"}}>
+                In comparasion with other students
+            </h2>
+        </div>
+        <div style={{padding: "20px"}}></div>
+        <CustomLineChart/> 
     </Form>
     
 )
@@ -102,7 +108,7 @@ const CurrentScores = (props) => {
 
 
         
-<CustomLineChart/> 
+
 
 
         </>
