@@ -1,7 +1,8 @@
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, Card } from "react-bootstrap";
 
 
 const Predict = () => {
+    let a=10;
     return (
         <>
     <Form>
@@ -77,7 +78,19 @@ const Predict = () => {
         <div style={{ textAlign: "center" }}>
             <Button variant="primary" type="submit">Click to Predict</Button>
         </div>
-        
+       
+        <div style={{padding: "20px"}}></div>
+<div style={{textAlign:"center",paddingLeft:"225px"}}>
+        <Card style={{ width: '18rem' }}>
+  <Card.Body>
+    <Card.Text style={{textAlign:"center"}}>
+    {a < 50 ? <h1 style={{ color: "red" }}>a</h1> : null}
+        {a >= 75 ? <h1 style={{ color: "green" }}>a</h1> : null}
+        {a <= 75 && a >=50 ? <h1 style={{ color: "yellow" }}>a</h1> : null}
+    </Card.Text>
+  </Card.Body>
+</Card>
+</div>
     </Form>
 
     
