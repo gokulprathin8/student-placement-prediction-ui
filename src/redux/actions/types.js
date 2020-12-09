@@ -16,3 +16,6 @@ export const FETCH_NOTIFICATION = "FETCH_NOTIFICATION";
 
 /* Current Scores */
 export const CURRENT_SCORES = "CURRENT_SCORES";
+
+/*  Assignments */
+export const POST_ASSIGNMENTS = "POST_ASSIGNMENTS";
