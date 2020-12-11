@@ -98,10 +98,6 @@ function Body() {
                     </Col>
                     <div style={{ paddingBottom: "10px" }}></div>
 
-
-
-
-
                 </Row>
 
                 <div style={{ padding: "20px" }}></div>

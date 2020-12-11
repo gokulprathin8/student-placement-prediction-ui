@@ -29,6 +29,7 @@ const Jobs = (props) => {
             <th>Bond</th>
             <th>Role</th>
             <th>Job description</th>
+            <th>Job Eligibility</th>
             <th></th>
           </tr>
         </thead>
@@ -39,10 +40,11 @@ const Jobs = (props) => {
                 <td>{job.id}</td>
                 <td>{job.companyName}</td>
                 <td>{job.package}</td>
-                <td>{job.hasBond.toString()}</td>
-                <td>{job.bondYears}</td>
+                <td>{job.hasBond? "yes":  "no"}</td>
+                <td>{job.bondYears===0? "-":  job.bondYears}</td>
                 <td>{job.role}</td>
                 <td>{job.jobDescription}</td>
+                <td>{job.eligibility.criteria_name}</td>
                 <td><button onClick={notify} type="button" class="btn btn-primary">Apply</button></td>
               </tr>
             </tbody>

@@ -68,13 +68,13 @@ const CurrentScores = (props) => {
             <Col>
             <Form.Group controlId="formCommunicationSkills">
     <Form.Label>Communication Skills</Form.Label>
-    <Form.Control type="text" placeholder={d.communicationSkills.toString() ? 'YES' : 'NO'}readOnly />
+    <Form.Control type="text" placeholder={d.communicationSkills}readOnly />
   </Form.Group>
             </Col>
             <Col>
             <Form.Group controlId="formInternship">
     <Form.Label>Internship</Form.Label>
-    <Form.Control type="text" placeholder={d.internship.toString() ? 'YES' : 'NO'}readOnly />
+    <Form.Control type="text" placeholder={d.internship}readOnly />
   </Form.Group>
             </Col>
             <Col>
