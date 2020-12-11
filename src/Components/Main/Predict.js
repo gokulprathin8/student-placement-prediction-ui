@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Form, Button, Row, Col, Card } from "react-bootstrap";
+import {connect} from "react-redux";
+import {postPredict} from "../../redux/actions";
 
-
-const Predict = () => {
+const Predict = (props) => {
     const [tenth, setTenth] = useState();
     const [twelth, setTwelth] = useState();
     const [btech, setBtech] = useState();
@@ -13,22 +14,26 @@ const Predict = () => {
     const [cp, setCp] = useState();
     const [int, setInt] = useState();
     const [pr, setPr] = useState();
-    const a = 40;
+    // const a = 40;
+    const [result, setResult] = useState(false);
+
 
     const onFormSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const formDataObj = Object.fromEntries(formData.entries());
-        setTenth(formDataObj.formTenthMarks);
-        setTwelth(formDataObj.formTwelthMarks);
-        setBtech(formDataObj.formBtechMarks);
-        setWdev(formDataObj.formWebDevelopment);
-        setAdev(formDataObj.formAndroiddevelopment);
-        setMl(formDataObj.formMachinelearning);
-        setCs(formDataObj.formCommunicationSkills);
-        setCp(formDataObj.formCompetitiveCoding);
-        setInt(formDataObj.formInternship);
-        setPr(formDataObj.formProjects);
+        setTenth(formDataObj.tenth);
+        setTwelth(formDataObj.twelth);
+        setBtech(formDataObj.btech);
+        setWdev(formDataObj.web_development);
+        setAdev(formDataObj.android_development);
+        setMl(formDataObj.machine_learning);
+        setCs(formDataObj.communication_skills);
+        setCp(formDataObj.competitive_coding);
+        setInt(formDataObj.internships);
+        setPr(formDataObj.projects);
+        props.postPredict(formDataObj);
+        setResult(true)
     }
 
     return (
@@ -38,19 +43,19 @@ const Predict = () => {
                     <Col>
                         <Form.Group>
                             <Form.Label>Tenth Marks</Form.Label>
-                            <Form.Control type="text" placeholder="Tenth Marks" name="formTenthMarks" />
+                            <Form.Control type="text" placeholder="Tenth Marks" name="tenth" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Twelth Marks</Form.Label>
-                            <Form.Control type="text" placeholder="Twelth Marks" name="formTwelthMarks" />
+                            <Form.Control type="text" placeholder="Twelth Marks" name="twelth" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Btech Marks</Form.Label>
-                            <Form.Control type="text" placeholder="Btech Mark" name="formBtechMarks" />
+                            <Form.Control type="text" placeholder="Btech Mark" name="btech" />
                         </Form.Group>
 
                     </Col>
@@ -59,19 +64,19 @@ const Predict = () => {
                     <Col>
                         <Form.Group >
                             <Form.Label>Web Development</Form.Label>
-                            <Form.Control type="text" placeholder="Web Development" name="formWebDevelopment" />
+                            <Form.Control type="text" placeholder="Web Development" name="web_development" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Machine learning</Form.Label>
-                            <Form.Control type="text" placeholder="Machine learning" name="formMachinelearning" />
+                            <Form.Control type="text" placeholder="Machine learning" name="machine_learning" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Android development</Form.Label>
-                            <Form.Control type="text" placeholder="Android development" name="formAndroiddevelopment" />
+                            <Form.Control type="text" placeholder="Android development" name="android_development" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -79,19 +84,19 @@ const Predict = () => {
                     <Col>
                         <Form.Group >
                             <Form.Label>Communication Skills</Form.Label>
-                            <Form.Control type="text" placeholder="Communication Skills" name="formCommunicationSkills" />
+                            <Form.Control type="text" placeholder="Communication Skills" name="communication_skills" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Internship</Form.Label>
-                            <Form.Control type="text" placeholder="Internship" name="formInternship" />
+                            <Form.Control type="text" placeholder="Internship" name="internships" />
                         </Form.Group>
                     </Col>
                     <Col>
                         <Form.Group >
                             <Form.Label>Projects</Form.Label>
-                            <Form.Control type="text" placeholder="Projects" name="formProjects" />
+                            <Form.Control type="text" placeholder="Projects" name="projects" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -99,7 +104,7 @@ const Predict = () => {
                     <Col xs={4} md={4}>
                         <Form.Group >
                             <Form.Label>Competitive Coding</Form.Label>
-                            <Form.Control type="text" placeholder="Competitive Coding" name="formCompetitiveCoding" />
+                            <Form.Control type="text" placeholder="Competitive Coding" name="competitive_coding" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -107,18 +112,22 @@ const Predict = () => {
                     <Button variant="primary" type="submit">Click to Predict</Button>
                 </div>
 
-               
-                        
-
 
                 <div style={{ padding: "20px" }}></div>
+                {result ?
                 <div style={{ textAlign: "center", paddingLeft: "225px" }}>
                     <Card style={{ width: '30rem' }}>
                         <Card.Body>
                             <Card.Text style={{ textAlign: "center" }}>
-                                {a < 50 ? <h1 style={{ color: "red" }}>a</h1> : null}
-                                {a >= 75 ? <h1 style={{ color: "green" }}>a</h1> : null}
-                                {a <= 75 && a >= 50 ? <h1 style={{ color: "yellow" }}>a</h1> : null}
+                                {/*{a < 50 ? <h1 style={{ color: "red" }}>a</h1> : null}*/}
+                                {/*{a >= 75 ? <h1 style={{ color: "green" }}>a</h1> : null}*/}
+                                {/*{a <= 75 && a >= 50 ? <h1 style={{ color: "yellow" }}>a</h1> : null}*/}
+
+                                {/*<h1 style={{ color: "purple" }}>{props.predict["result"]}</h1>*/}
+                                <h1 style={{ color: "purple" }}>{props.predict["result"]}</h1>
+                                <hr/>
+
+
 
                                 {tenth <= 5 ? <div>*Your tenth marks are too low <br/></div> : null }
                                 {(tenth >= 6) && (tenth < 8) ? <div>*Your tenth is descent.<br/></div> : null }
@@ -156,11 +165,11 @@ const Predict = () => {
                                 {cp == 0 ? <div>*You need to learn competitive Coding <br/></div> : null }
                                 {cp == 1  ? <div>*You are good to go in competitive Coding .<br/></div> : null }
 
-                                
+
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </div>
+                </div>: null}
             </Form>
 
 
@@ -168,4 +177,8 @@ const Predict = () => {
     )
 }
 
-export default Predict;
+const mapStateToProps = (state) => {
+    return {predict : state.predict.undefined};
+}
+
+export default connect(mapStateToProps, {postPredict}, null, {forwardRef: true})(Predict);

@@ -21,7 +21,7 @@ const Notifications = (props) => {
                     <th>Image</th>
                     <th>Title</th>
                     <th>Message</th>
-                    <th></th>
+                    <th>Posted By</th>
                 </tr>
                 </thead>
                 {props.notifications.length > 0 ? props.notifications.map((data) => {
@@ -32,8 +32,7 @@ const Notifications = (props) => {
                             <td><img src={data.notificationImage} width="75px" height="75px"/></td>
                             <td>{data.title}</td>
                             <td>{data.description}</td>
-                            <td><Button type="button" class="btn btn-primary"> <FontAwesomeIcon icon={faTrash}/>
-                            </Button></td>
+                            <td>{data.posted_by.username}</td>
                         </tr>
                         </tbody>
                     )

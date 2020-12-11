@@ -3,12 +3,12 @@ import {Button, Form} from "react-bootstrap";
 import {connect} from "react-redux";
 import {postFeedback} from "../../redux/actions";
 
-const submitHandler = (e) => {
-    e.preventDefault()
-    console.log('pressed');
-    const form = e.currentTarget;
-    console.log(form);
-}
+// const submitHandler = (e) => {
+//     e.preventDefault()
+//     console.log('pressed');
+//     const form = e.currentTarget;
+//     console.log(form);
+// }
 
 
 const Feedback = (props) => {
@@ -29,7 +29,7 @@ const Feedback = (props) => {
             "description": description
         }
         const formData = new FormData(e.target);
-        const formDataObj = Object.fromEntries(formData.entries())
+        const formDataObj = Object.fromEntries(formData.entries());
         formDataObj.user = 1;
         props.postFeedback(formDataObj);
     };

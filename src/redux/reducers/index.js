@@ -6,6 +6,7 @@ import feedbackReducer from "./feedbackReducer";
 import notificationReducer from "./notificationReducer";
 import currentScoresReducer from "./currentScoresReducer";
 import assignmentsReducer from "./assignmentsReducer";
+import predictReducer from "./predictReducer";
 
 export default combineReducers({
     jobs: jobsReducer,
@@ -15,4 +16,5 @@ export default combineReducers({
     notifications: notificationReducer,
     scores: currentScoresReducer,
     assignments: assignmentsReducer,
+    predict: predictReducer,
 });

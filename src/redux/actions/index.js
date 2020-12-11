@@ -5,3 +5,4 @@ export * from "./feedback";
 export * from "./notifications";
 export * from "./currentScores";
 export * from "./assignments";
+export * from "./predict";
