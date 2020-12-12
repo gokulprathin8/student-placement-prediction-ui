@@ -3,11 +3,11 @@ import {
 } from "../actions/types";
 
 export default (
-    state = {predictList: {}}, action
+    state = {predict:{}}, action
 ) => {
     switch (action.type) {
         case PREDICT:
-            return { ...state, [action.payload.id]: action.payload }
+            return { ...state, predict: action.payload }
         default:
             return state
     }

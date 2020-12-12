@@ -32,7 +32,9 @@ const Predict = (props) => {
         setCp(formDataObj.competitive_coding);
         setInt(formDataObj.internships);
         setPr(formDataObj.projects);
-        props.postPredict(formDataObj);
+        props.postPredict(formDataObj).then(() =>{
+            console.log(props.predict);
+        });
         setResult(true)
     }
 
@@ -124,7 +126,7 @@ const Predict = (props) => {
                                 {/*{a <= 75 && a >= 50 ? <h1 style={{ color: "yellow" }}>a</h1> : null}*/}
 
                                 {/*<h1 style={{ color: "purple" }}>{props.predict["result"]}</h1>*/}
-                                <h1 style={{ color: "purple" }}>{props.predict["result"]}</h1>
+                                <h1 style={{ color: "purple" }}>{props.predict.result}</h1>
                                 <hr/>
 
 
@@ -178,7 +180,7 @@ const Predict = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    return {predict : state.predict.undefined};
+    return {predict : state.predict.predict};
 }
 
 export default connect(mapStateToProps, {postPredict}, null, {forwardRef: true})(Predict);

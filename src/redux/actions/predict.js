@@ -5,9 +5,9 @@ import {
 
 export const postPredict = (value) => async (dispatch) => {
     const response = await gitamx.post("/predict/", value )
+    console.log(response);
     dispatch({
         type: PREDICT,
         payload: response.data,
-    });
-    return response.data;
+    })
 }
