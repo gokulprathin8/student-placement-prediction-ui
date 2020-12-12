@@ -14,10 +14,11 @@ import CustomCalender from "./CustomCalender";
 import { Fade, Zoom } from "react-awesome-reveal";
 import Feedback from "../Main/Feedback";
 import Assignment from "../Main/Assignment";
+import CommonOut from "./CommonOut";
 
 const CommonLayout = () => {
     return (
-        <HeaderFooter isLoggedin="true">
+        <CommonOut isLoggedin="true">
           
             <div style={{ textAlign: "center" }}>
             <Jumbotron>
@@ -81,7 +82,7 @@ const CommonLayout = () => {
       <div style={{ padding: "20px" }}> </div>
       
 
-        </HeaderFooter>
+        </CommonOut>
     )
 }
 
