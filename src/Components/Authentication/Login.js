@@ -18,7 +18,7 @@ const Login = (props) => {
     const formDataObj = Object.fromEntries(formData.entries());
     console.log(formDataObj);
     console.log(formDataObj.email);
-    if (formDataObj.email == "221710304019@gitam.in" && formDataObj.password == "password@123") {
+    if (formDataObj.email === "221710304019@gitam.in" && formDataObj.password === "password@123") {
         console.log("correct info");
     } else {
           fail();

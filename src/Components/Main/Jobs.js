@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button, Table, Alert } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { connect } from "react-redux";
 import { fetchJobs } from "../../redux/actions";
 // import { useAlert } from "react-alert";

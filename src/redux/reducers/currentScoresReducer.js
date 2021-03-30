@@ -2,10 +2,7 @@ import {
     CURRENT_SCORES
 } from "../actions/types";
 
-export default (
-    state = {currentScoresList: {}},
-    action
-) => {
+const currentScoresReducer =  ( state = {currentScoresList: {}}, action ) => {
     switch (action.type) {
         case CURRENT_SCORES:
             return { ...state, currentScoresList: action.payload }
@@ -13,3 +10,5 @@ export default (
             return state;
     }
 }
+
+export default currentScoresReducer;

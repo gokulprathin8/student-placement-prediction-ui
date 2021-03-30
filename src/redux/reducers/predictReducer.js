@@ -2,9 +2,7 @@ import {
     PREDICT
 } from "../actions/types";
 
-export default (
-    state = {predict:{}}, action
-) => {
+const predictReducer =  ( state = {predict:{}}, action ) => {
     switch (action.type) {
         case PREDICT:
             return { ...state, predict: action.payload }
@@ -12,3 +10,5 @@ export default (
             return state
     }
 };
+
+export default predictReducer;

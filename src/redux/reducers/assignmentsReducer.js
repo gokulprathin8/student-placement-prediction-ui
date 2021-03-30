@@ -2,9 +2,7 @@ import {
     POST_ASSIGNMENTS
 } from "../actions/types";
 
-export default (
-    state = {assignmentsList: {}}, action
-) => {
+const assignmentsReducer = (state = {assignmentsList: {}}, action) => {
     switch (action.type) {
         case POST_ASSIGNMENTS:
             return { ...state, [action.payload.id]: action.payload }
@@ -12,3 +10,5 @@ export default (
             return state
     }
 };
+
+export default assignmentsReducer;

@@ -2,9 +2,7 @@ import {
     POST_FEEDBACK
 } from "../actions/types";
 
-export default (
-    state = {feedbackList: {}}, action
-) => {
+const feedbackReducer = ( state = {feedbackList: {}}, action ) => {
     switch (action.type) {
         case POST_FEEDBACK:
             return { ...state, [action.payload.id]: action.payload }
@@ -12,3 +10,5 @@ export default (
             return state
     }
 };
+
+export default feedbackReducer;

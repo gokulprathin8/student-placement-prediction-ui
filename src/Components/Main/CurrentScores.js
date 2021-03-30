@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Button, Col, Form, Nav, Row, Tab } from "react-bootstrap";
+import { Col, Form, Row } from "react-bootstrap";
 import { connect } from "react-redux";
 import {currentScores} from "../../redux/actions";
 import CustomLineChart from "../../charts/CustomLineChart";

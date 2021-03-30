@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import {Button, Table} from "react-bootstrap";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import {faTrash} from "@fortawesome/free-solid-svg-icons";
-import {Fade} from "react-awesome-reveal";
+import { Table } from "react-bootstrap";
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+// import {faTrash} from "@fortawesome/free-solid-svg-icons";
+// import {Fade} from "react-awesome-reveal";
 
 import {connect} from "react-redux";
 import {fetchNotifications} from "../../redux/actions";

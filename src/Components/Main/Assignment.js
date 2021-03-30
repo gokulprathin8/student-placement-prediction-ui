@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect } from "react";
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import {connect} from "react-redux";
 import {postAssignment} from "../../redux/actions";
 
 
-const content = {"entityMap":{},"blocks":[{"key":"637gr","text":"Initialized from content state.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]};
+// const content = {"entityMap":{},"blocks":[{"key":"637gr","text":"Initialized from content state.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]};
 
 const Assignment = (props) => {
 

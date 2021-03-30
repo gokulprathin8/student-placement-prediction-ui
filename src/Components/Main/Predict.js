@@ -143,14 +143,14 @@ const Predict = (props) => {
                                 {(btech >= 6) && (btech < 8) ? <div>*Your btech is descent.<br/></div> : null }
                                 {btech >= 8 ? <div>*Your btech marks are good.</div> : null }
 
-                                {wdev == 0 ? <div>*You need to learn web dev <br/></div> : null }
-                                {wdev == 1  ? <div>*You are good to go in web dev.<br/></div> : null }
+                                {wdev === 0 ? <div>*You need to learn web dev <br/></div> : null }
+                                {wdev === 1  ? <div>*You are good to go in web dev.<br/></div> : null }
 
-                                {ml == 0 ? <div>*You need to learn machine learning  <br/></div> : null }
-                                {ml == 1  ? <div>*You are good to go in ml.<br/></div> : null }
+                                {ml === 0 ? <div>*You need to learn machine learning  <br/></div> : null }
+                                {ml === 1  ? <div>*You are good to go in ml.<br/></div> : null }
 
-                                {adev == 0 ? <div>*You need to learn android dev <br/></div> : null }
-                                {adev == 1  ? <div>*You are good to go in android dev .<br/></div> : null }
+                                {adev === 0 ? <div>*You need to learn android dev <br/></div> : null }
+                                {adev === 1  ? <div>*You are good to go in android dev .<br/></div> : null }
 
                                 {cs<= 5 ? <div>*Your communication skills are too low</div> : null }
                                 {(cs >= 6) && (cs < 8) ? <div>'*Your communication skills are descent.</div> : null }
@@ -164,8 +164,8 @@ const Predict = (props) => {
                                 {(pr >= 2) && (pr < 4) ? <div>'*Your projects are descent.</div> : null }
                                 {pr >= 5 ? <div>*Your projects are good.</div> : null }
 
-                                {cp == 0 ? <div>*You need to learn competitive Coding <br/></div> : null }
-                                {cp == 1  ? <div>*You are good to go in competitive Coding .<br/></div> : null }
+                                {cp === 0 ? <div>*You need to learn competitive Coding <br/></div> : null }
+                                {cp === 1  ? <div>*You are good to go in competitive Coding .<br/></div> : null }
 
 
                             </Card.Text>

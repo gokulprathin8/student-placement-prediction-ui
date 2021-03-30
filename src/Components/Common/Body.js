@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from "react-bootstrap/cjs/Row";
 import Col from "react-bootstrap/cjs/Col";
-import { Button, Card, Tabs, Tab } from 'react-bootstrap';
-import { Fade, Zoom, Bounce, Rotate, Slide, Roll } from "react-awesome-reveal";
+import { Card, Tabs, Tab } from 'react-bootstrap';
+import { Fade, Zoom, Bounce, Rotate, Slide } from "react-awesome-reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrash, faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Coreteam from "./Coreteam";
 import Facultycoordinator from "./Facultycoordinator";
 import Recruitmentprocess from "./Recruitmentprocess";

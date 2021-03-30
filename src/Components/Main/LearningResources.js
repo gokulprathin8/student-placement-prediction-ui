@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Button, Card, Col, Row} from "react-bootstrap";
+import {Button, Card, Row} from "react-bootstrap";
 import {connect} from "react-redux";
 import {fetchLearningResources} from "../../redux/actions";
 

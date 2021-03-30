@@ -2,7 +2,7 @@ import {
     FETCH_NOTIFICATION
 } from "../actions/types";
 
-export default (
+const notificationReducer =  (
     state = {notificationList: {}},
     action
 ) => {
@@ -13,3 +13,5 @@ export default (
             return state;
     }
 }
+
+export default notificationReducer;

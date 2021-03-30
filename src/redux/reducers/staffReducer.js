@@ -2,10 +2,7 @@ import {
     FETCH_FACULTY
 } from "../actions/types";
 
-export default (
-    state = {facultyList: {}},
-    action
-) => {
+const staffReducer =  ( state = {facultyList: {}}, action ) => {
     switch (action.type) {
         case FETCH_FACULTY:
             return { ...state, facultyList: action.payload }
@@ -13,3 +10,5 @@ export default (
             return state;
     }
 }
+
+export default staffReducer;

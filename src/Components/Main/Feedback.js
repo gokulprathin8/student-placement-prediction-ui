@@ -15,19 +15,19 @@ const Feedback = (props) => {
 
 
     const [value, setValue] = useState();
-    const onInput = ({target: {value}}) => setValue(value);
+    // const onInput = ({target: {value}}) => setValue(value);
 
     const [description, setDescription] = useState();
-    const getDescription = ({target: {value}}) => setDescription(value);
+    // const getDescription = ({target: {value}}) => setDescription(value);
 
     const onFormSubmit = (e) => {
         e.preventDefault()
         setValue()
-        const data = {
-            "user": 1,
-            "title": value,
-            "description": description
-        }
+        // const data = {
+        //     "user": 1,
+        //     "title": value,
+        //     "description": description
+        // }
         const formData = new FormData(e.target);
         const formDataObj = Object.fromEntries(formData.entries());
         formDataObj.user = 1;

@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: 'https://student-placement-prediction-1.herokuapp.com/api',
+    baseURL: 'https://never-sleep-dyno-249532349.herokuapp.com/api',
 })

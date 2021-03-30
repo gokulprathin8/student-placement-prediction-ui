@@ -55,21 +55,21 @@ const board = {
     ]
   };
 
-  function ControlledBoard() {
-    // You need to control the state yourself.
-    const [controlledBoard, setBoard] = useState(board);
+  // function ControlledBoard() {
+  //   // You need to control the state yourself.
+  //   const [controlledBoard, setBoard] = useState(board);
   
-    function handleCardMove(_card, source, destination) {
-      const updatedBoard = moveCard(controlledBoard, source, destination);
-      setBoard(updatedBoard);
-    }
+  //   function handleCardMove(_card, source, destination) {
+  //     const updatedBoard = moveCard(controlledBoard, source, destination);
+  //     setBoard(updatedBoard);
+  //   }
   
-    return (
-      <Board onCardDragEnd={handleCardMove} disableColumnDrag>
-        {controlledBoard}
-      </Board>
-    );
-  }
+  //   return (
+  //     <Board onCardDragEnd={handleCardMove} disableColumnDrag>
+  //       {controlledBoard}
+  //     </Board>
+  //   );
+  // }
   
   function UncontrolledBoard() {
     return (
