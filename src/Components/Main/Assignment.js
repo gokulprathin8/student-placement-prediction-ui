@@ -9,7 +9,7 @@ import {postAssignment} from "../../redux/actions";
 
 const Assignment = (props) => {
 
-        useEffect(() => {
+        useEffect((props) => {
             props.postAssignment();
         }, []);
 

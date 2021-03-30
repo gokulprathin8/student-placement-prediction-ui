@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 import {fetchNotifications} from "../../redux/actions";
 
 const Notifications = (props) => {
-    useEffect(() => {
+    useEffect((props) => {
         props.fetchNotifications();
     }, []);
 
@@ -29,7 +29,7 @@ const Notifications = (props) => {
                         <tbody>
                         <tr>
                             <td>{data.id}</td>
-                            <td><img src={data.notificationImage} width="75px" height="75px"/></td>
+                            <td><img src={data.notificationImage} alt="img" width="75px" height="75px"/></td>
                             <td>{data.title}</td>
                             <td>{data.description}</td>
                             <td>{data.posted_by.username}</td>

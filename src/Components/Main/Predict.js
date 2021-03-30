@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import { Form, Button, Row, Col, Card } from "react-bootstrap";
 import {connect} from "react-redux";
 import {postPredict} from "../../redux/actions";

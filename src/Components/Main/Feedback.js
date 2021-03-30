@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React,{useState} from "react";
 import {Button, Form} from "react-bootstrap";
 import {connect} from "react-redux";
 import {postFeedback} from "../../redux/actions";
@@ -14,11 +14,11 @@ import {postFeedback} from "../../redux/actions";
 const Feedback = (props) => {
 
 
-    const [value, setValue] = useState();
-    // const onInput = ({target: {value}}) => setValue(value);
+    const [ setValue] = useState();
+     //const onInput = ({target: {value}}) => setValue(value);
 
-    const [description, setDescription] = useState();
-    // const getDescription = ({target: {value}}) => setDescription(value);
+    // const [description, setDescription] = useState();
+    // // const getDescription = ({target: {value}}) => setDescription(value);
 
     const onFormSubmit = (e) => {
         e.preventDefault()

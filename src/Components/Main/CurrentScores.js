@@ -6,7 +6,7 @@ import CustomLineChart from "../../charts/CustomLineChart";
 
 
 const CurrentScores = (props) => {
-    useEffect(() => {
+    useEffect((props) => {
         props.currentScores();
     }, []);
 

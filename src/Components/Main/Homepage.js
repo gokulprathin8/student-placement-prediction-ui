@@ -12,7 +12,6 @@ const Homepage = () => {
             <p style={{ textAlign: "center" }}>Remember Something? Write it down before you forget!</p>
             <SketchField width='1024px'
                 height='400px'
-                width="900px"
                 tool={Tools.Pencil}
                 lineColor='black'
                 lineWidth={3} 

@@ -1,12 +1,13 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import './login.css';
 
 const { Card, Form, Button } = require("react-bootstrap")
 
 const Login = (props) => {
-  const pass = () => {
-    <Link to="/home"/>
-  }
+//   const pass = () => {
+//     <Link to="/home"/>
+//   }
 
   const fail = () => {
     <Link to="/login"/>
@@ -27,6 +28,7 @@ const Login = (props) => {
   }
 
   return (
+    <React.Fragment>
     <div class="Login-component">
       <div style={{ textAlign: "left", paddingLeft: "35%", paddingRight: "35%", paddingTop: "10%" }}>
         <h4 style={{color:"blue"}}>Login to Access TnP Student Portal</h4>
@@ -61,7 +63,9 @@ const Login = (props) => {
         
       </div>
     </div>
-  )
+    </React.Fragment>
+  );
 }
+
 
 export default Login;

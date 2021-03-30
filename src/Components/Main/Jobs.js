@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 const Jobs = (props) => {
   // const alert = useAlert();
 
-  useEffect(() => {
+  useEffect((props) => {
     props.fetchJobs();
   }, []);
 

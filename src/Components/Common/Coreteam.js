@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTrash, faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 const { Card, Col, Row } = require("react-bootstrap")
 
 const Coreteam = () =>

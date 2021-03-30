@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {fetchLearningResources} from "../../redux/actions";
 
 const LearningResources = (props) => {
-    useEffect(() => {
+    useEffect((props) => {
         props.fetchLearningResources();
     }, []);
 

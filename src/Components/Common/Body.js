@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from "react-bootstrap/cjs/Row";
 import Col from "react-bootstrap/cjs/Col";
 import { Card, Tabs, Tab } from 'react-bootstrap';
-import { Fade, Zoom, Bounce, Rotate, Slide } from "react-awesome-reveal";
+import { Fade, Zoom, Bounce, Slide } from "react-awesome-reveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Coreteam from "./Coreteam";
@@ -22,16 +22,16 @@ function Body() {
             <div style={{ padding: "40px", background: "lightblue", margin: "auto" }}>
                 <Slider {...settings}>
                     <div>
-                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/d7e5e75a90b2f51ad6611d881a398220.jpg" width="100%" height="250px" />
+                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/d7e5e75a90b2f51ad6611d881a398220.jpg" alt="img1" width="100%" height="250px" />
                     </div>
                     <div>
-                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/10f08e7a76483a560b4f99c19a69d5f8.jpg" width="100%" height="250px" />
+                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/10f08e7a76483a560b4f99c19a69d5f8.jpg" alt="img2" width="100%" height="250px" />
                     </div>
                     <div>
-                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/1fb65c1febe3323ba7ba8e84db0a99a8.jpg" width="100%" height="250px" />
+                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/1fb65c1febe3323ba7ba8e84db0a99a8.jpg"  alt="img3" width="100%" height="250px" />
                     </div>
                     <div>
-                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/ecb1b4b78c63d1c81c8feed7671422de.jpg" width="100%" height="250px" />
+                        <img src="https://gitamhydgstplacements.gitam.edu/admin_hyd_gst/assets/uploads/slider/ecb1b4b78c63d1c81c8feed7671422de.jpg" width="100%" alt="img4" height="250px" />
                     </div>
                 </Slider>
             </div>

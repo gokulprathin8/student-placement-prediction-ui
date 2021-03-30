@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {fetchFaculty} from "../../redux/actions";
 
 const Faculty = (props) => {
-    useEffect(() => {
+    useEffect((props) => {
         props.fetchFaculty();
     }, [])
 
