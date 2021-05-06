@@ -4,21 +4,19 @@ import { connect } from "react-redux";
 import { fetchJobs } from "../../redux/actions";
 // import { useAlert } from "react-alert";
 
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-  const notify = () => toast("Thanks for Applying! We will get back to you");
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const notify = () => toast("Thanks for Applying! We will get back to you");
 const Jobs = (props) => {
   // const alert = useAlert();
 
-  useEffect((props) => {
+  useEffect(() => {
     props.fetchJobs();
   }, []);
 
-
   return (
-
     <>
-    <ToastContainer />
+      <ToastContainer />
       <Table striped style={{ textAlign: "center" }}>
         <thead>
           <tr>
@@ -33,33 +31,40 @@ const Jobs = (props) => {
             <th></th>
           </tr>
         </thead>
-        {props.jobs.length > 0 ? props.jobs.map((job) => {
-          return (
-            <tbody>
-              <tr>
-                <td>{job.id}</td>
-                <td>{job.companyName}</td>
-                <td>{job.package}</td>
-                <td>{job.hasBond? "yes":  "no"}</td>
-                <td>{job.bondYears===0? "-":  job.bondYears}</td>
-                <td>{job.role}</td>
-                <td>{job.jobDescription}</td>
-                <td>{job.eligibility.criteria_name}</td>
-                <td><button onClick={notify} type="button" class="btn btn-primary">Apply</button></td>
-              </tr>
-            </tbody>
-          )
-        }) : null}
-
+        {props.jobs.length > 0
+          ? props.jobs.map((job) => {
+              return (
+                <tbody>
+                  <tr>
+                    <td>{job.id}</td>
+                    <td>{job.companyName}</td>
+                    <td>{job.package}</td>
+                    <td>{job.hasBond ? "yes" : "no"}</td>
+                    <td>{job.bondYears === 0 ? "-" : job.bondYears}</td>
+                    <td>{job.role}</td>
+                    <td>{job.jobDescription}</td>
+                    <td>{job.eligibility.criteria_name}</td>
+                    <td>
+                      <button
+                        onClick={notify}
+                        type="button"
+                        class="btn btn-primary"
+                      >
+                        Apply
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              );
+            })
+          : null}
       </Table>
-
-
     </>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state) => {
   return { jobs: state.jobs.jobsList };
-}
+};
 
 export default connect(mapStateToProps, { fetchJobs })(Jobs);
